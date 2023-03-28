@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        BookShelf bookShelf = new BookShelf(6);
+        BookShelf bookShelf = new BookShelf(7);
         bookShelf.appendBook(new Book("자료구조론", "박우창"));
         bookShelf.appendBook(new Book("소프트웨어분석설계", "최승훈"));
         bookShelf.appendBook(new Book("프로그래머수학", "이주영"));
