@@ -1,0 +1,10 @@
+#written by FileProperties
+#Wed Mar 29 01:35:37 KST 2023
+bornYear=2000
+Year=2023
+width=640
+name=khs
+height=100
+StudentId=20200733
+Name=KimHyeSoo
+Location=Gimpo
