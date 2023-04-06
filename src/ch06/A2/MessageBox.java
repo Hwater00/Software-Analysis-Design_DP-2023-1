@@ -10,7 +10,7 @@ public class MessageBox implements Product {
     }
 
     // 복사 생성자 
-    public MessageBox(MessageBox prototype) {
+    public MessageBox(MessageBox prototype) { //들어오는 인자 속성을 그대로 복사
         this.decochar = prototype.decochar;
     }
 
