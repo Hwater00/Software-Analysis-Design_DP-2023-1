@@ -6,7 +6,7 @@ import java.util.List;
 
 public class BookShelf implements Iterable<Book> { ///BookShelf는 반복이 가능한데 각 원소의 타입은 책이다.
 
-  //private Book[]  books; //배열 선언 단계
+  private Book[]  books; //배열 선언 단계
  //ArrayList 크기 제한 없이
   private List<Book> books = new ArrayList();
   //ArrayList 사용 후 배열관련 크기 .add() .get()으로 변경하기 
@@ -15,7 +15,8 @@ public class BookShelf implements Iterable<Book> { ///BookShelf는 반복이 가
 
   public BookShelf(int maxsize){
     //배열 생성 과정
-    this.books =new Book[maxsize]; //배열의 키기 결정_고정
+     this.books =new Book[maxsize]; //배열의 크기 결정_고정
+    
   }
 
     //책을 꽃는 메소드

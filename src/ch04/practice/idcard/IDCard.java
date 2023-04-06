@@ -2,6 +2,7 @@ package ch04.practice.idcard;
 
 import ch04.practice.framework.Product;
 
+//뼈대에 살을 붙여 구체적인 내용을 구현하는 역할
 //Product에 인자 없는 생성자가 먼저 호출되고 IDCard 실행됨
 public class IDCard extends Product { //Product를 상속
     private String owner;
