@@ -7,7 +7,7 @@ public class Singleton {
         System.out.println("인스턴스를 생성했습니다.");
         slowdown();
     }
-
+//synchronized 키워드
     public static synchronized Singleton getInstance() {
         if (singleton == null) {
             singleton = new Singleton();

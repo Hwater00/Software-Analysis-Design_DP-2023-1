@@ -1,11 +1,15 @@
 package ch05.A3a;
 
-public class Main extends Thread {
+// Main 클래스가 스레드 클래스임
+public class Main extends Thread { 
     public static void main(String[] args) {
         System.out.println("Start.");
-        new Main("A").start();
-        new Main("B").start();
-        new Main("C").start();
+        
+        //스레드 객체가 3개 생성됨
+        new Main("A").start(); //각각 시작해라
+        new Main("B").start(); //각각 시작해라
+        new Main("C").start(); //각각 시작해라
+    
         System.out.println("End.");
     }
 
