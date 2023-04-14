@@ -13,6 +13,7 @@ public class Main2 extends Thread {
       //학번 이름 출력
     System.out.println("20200733 김혜수");
 
+    
   }
 
   @Override

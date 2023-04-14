@@ -6,11 +6,12 @@ import java.util.List;
 
 public class BookShelf implements Iterable<Book> { ///BookShelf는 반복이 가능한데 각 원소의 타입은 책이다.
 
-  private Book[]  books; //배열 선언 단계
- //ArrayList 크기 제한 없이
-  private List<Book> books = new ArrayList();
+  private Book[] books; //배열 선언 단계
+/* 
+  //ArrayList 크기 제한 없이
+  private List<Book> books = new ArrayList(); 
   //ArrayList 사용 후 배열관련 크기 .add() .get()으로 변경하기 
-
+*/
   private int last=0; //책의 마지막 위치= 책의 갯수를 가지는 변수
 
   public BookShelf(int maxsize){

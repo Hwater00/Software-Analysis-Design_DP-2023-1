@@ -9,7 +9,7 @@ public class IDCard extends Product { //Product를 상속
 
     //패키지 visibility로 앞에 아무것도 없으면 같은 패키지내에서만 부를 수 있다.
     // public IDCard(String owner) {
-    public IDCard(String owner) {
+    IDCard(String owner) {
         System.out.println(owner + "의 카드를 만듭니다.");
         this.owner = owner;
     }

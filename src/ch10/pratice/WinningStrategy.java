@@ -5,7 +5,7 @@ import java.util.Random;
 public class WinningStrategy implements Strategy {
     private Random random; // 임의의 수 생성기
     private boolean won = false;
-    private Hand prevHand;
+    private Hand prevHand; //지난번 승부에서 내민 손 저장
 
     public WinningStrategy(int seed) { 
         random = new Random(seed); //sead가 같으면 동일한 숫자가 생성됨

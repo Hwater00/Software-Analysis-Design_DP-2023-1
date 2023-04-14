@@ -3,14 +3,14 @@ package ch05.A2a;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Start.");
-        Triple a1 = Triple.getInstance("ALPHA");
+        Triple a1 = Triple.getInstance("ALPHA"); //트리플.get--(이름)
         Triple b1 = Triple.getInstance("BETA");
         Triple c1 = Triple.getInstance("GAMMA");
         Triple a2 = Triple.getInstance("ALPHA");
         Triple b2 = Triple.getInstance("BETA");
         Triple c2 = Triple.getInstance("GAMMA");
         
-        //같다
+        //같다=> 3개 이상 인스턴스를 갖지 못했다.
         if (a1 == a2) {
             System.out.println("a1 == a2 (" + a1 + ")");
         } else {
