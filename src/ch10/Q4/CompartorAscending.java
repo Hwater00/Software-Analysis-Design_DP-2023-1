@@ -6,7 +6,7 @@ public class CompartorAscending implements Comparator{
 
   @Override
   //오름차순으로 정렬되도록 반환값을 리턴해야함
-  public int compare(Object a, Object b) { 
+  public int compare(Object a, Object b) { //Comparable 인터페이스는 Object로 선언되어 있어 자식에서 마음대로 수정 불가
     //반환값: 양수, 음수 , 0
     //정렬 주체(list)는 양수가 리턴되면 a와 b의 위치를 서로 바꾼다.
     //오름차순: 작은 것이 앞에 옴
