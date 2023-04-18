@@ -33,9 +33,10 @@ public class Directory extends Entry {
         }
     }
 
+    //A2
     public Entry add(Entry entry) {
         directory.add(entry);
-        entry.setParent(this);
+        entry.setParent(this); //현재 디렉토리를 추가할 자식의 부모로 설정함 , this가 부모
         return this;
     }
 }

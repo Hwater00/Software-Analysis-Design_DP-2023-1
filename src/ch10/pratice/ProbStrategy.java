@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class ProbStrategy implements Strategy {
     private Random random;
-    private int prevHandValue = 0;
-    private int currentHandValue = 0; //직전에 낸 손
+    private int prevHandValue = 0; //지난번에 낸 손
+    private int currentHandValue = 0;  //이번에 낸 손
     
      //2차원 배열 indwx 2개 [][]
     private int[][] history = {
@@ -19,8 +19,9 @@ public class ProbStrategy implements Strategy {
     }
 
     @Override
-    public Hand nextHand() {
-        int bet = random.nextInt(getSum(currentHandValue));
+    public Hand nextHand() { //이번에 낸 손을 기반으로 다음에 낸 손
+        //함수 내 지역변수
+        int bet = random.nextInt(getSum(currentHandValue)); 
         int handvalue = 0;
 
         if (bet < history[currentHandValue][0]) { //첫번째 구간
@@ -31,10 +32,11 @@ public class ProbStrategy implements Strategy {
             handvalue = 2;
         }
         
-        prevHandValue = currentHandValue;
+        prevHandValue = currentHandValue; //이번에 낸 손을 과거 손으로 이동
         currentHandValue = handvalue;
-        return Hand.getHand(handvalue);
+        return Hand.getHand(handvalue); //숫자 값을 enum 상수로 바꿔서 보낸다. 그러기 위해서는 Hand. !실수 주의!
     }
+    
 
     
     private int getSum(int handvalue) { 
@@ -46,7 +48,7 @@ public class ProbStrategy implements Strategy {
     }
 
     @Override
-    public void study(boolean win) {
+    public void study(boolean win) { //졌는지 이겼는지 알려줌
         if (win) { 
             history[prevHandValue][currentHandValue]++;
         } else {

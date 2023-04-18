@@ -15,7 +15,7 @@ public class Main {
         rootdir.printList();
 
         System.out.println();
-        System.out.println("file = " + file.getFullName());
+        System.out.println("file = " + file.getFullName()); 
         System.out.println("youngjin = " + youngjin.getFullName());
     }
 }

@@ -1,8 +1,8 @@
 package ch10.pratice;
 
 public class Player {
-    private String name;
     
+    private String name;
     private Strategy strategy; //현재 전략을 보관(부모 타입으로 선언됨)
     
     private int wincount =0 ;

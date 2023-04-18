@@ -11,6 +11,7 @@ public class RandomStrategy implements Strategy {
 
     @Override
     public void study(boolean win) {
+        //두서 없이 다음손을 내기 때문에 study는 비어있다
     }
 
     @Override

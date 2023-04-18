@@ -38,9 +38,10 @@ public class Main{
       //iterator 얻기
       System.out.println("<book list using iterator>");
       //BookShelfIterator iterator =bs1.iterator();
+      
+      
       Iterator<Book> iterator = bs1.iterator();
       //iterator 이용해서 원소 얻어오기
-      
       while( iterator.hasNext() ){ //true일때만 호출
         Book b = iterator.next();
         System.out.println(b.getName());
