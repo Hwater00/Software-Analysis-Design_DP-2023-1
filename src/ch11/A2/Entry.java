@@ -9,13 +9,10 @@ public abstract class Entry {
         this.parent = parent;
     }
 
-    // 이름을 가져온다 
     public abstract String getName();
 
-    // 크기를 가져온다 
     public abstract int getSize();
 
-    // 목록을 표시한다 
     public void printList() {
         printList("");
     }

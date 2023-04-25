@@ -27,7 +27,7 @@ public enum Hand {
         return hands[handvalue]; //hands[1]=가위
     }
 
-//손을 비교 sStrongerThan
+//손을 비교 
     // this(현재 손)가 h(인자로 들어온 손)보다 강할 때 true
     public boolean isStrongerThan(Hand h) { 
         return fight(h) == 1;

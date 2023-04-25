@@ -8,6 +8,7 @@ public enum Triple {
     }
 
     public static Triple getInstance(String name) {
-        return valueOf(name);
+        return valueOf(name); //  지정된 이름을 가진 지정된 열거형 유형의 열거형 상수를 반환합니다. 
+        
     }
 }

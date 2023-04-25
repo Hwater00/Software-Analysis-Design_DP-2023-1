@@ -1,6 +1,5 @@
 package hw.ch10;
 
-
 public class Student implements Comparable<Student>  {
   String name="";
   int height;
