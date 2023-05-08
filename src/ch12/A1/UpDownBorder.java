@@ -1,6 +1,6 @@
 package ch12.A1;
 
-public class UpDownBorder extends Border {
+public class UpDownBorder extends Border { //장식자Border 상속
     private char borderChar;  // 장식 문자 
 
     // 내용물이 될 Display와 장식 문자를 지정
@@ -28,7 +28,7 @@ public class UpDownBorder extends Border {
             return makeLine(borderChar, getColumns());
         } else {
             // 내용물의 행(맨 위 행수만큼 행 번호를 줄인다
-            return display.getRowText(row - 1);
+            return display.getRowText(row - 1); //내용물을 준다. 0번부터 시작히기 때문에 내용물은 1을 뺀 값이다.
         }
     }
 

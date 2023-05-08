@@ -2,7 +2,7 @@ package ch12.Sample;
 
 public class FullBorder extends Border {
     public FullBorder(Display display) {
-        super(display);
+        super(display); //부모 생성자 호출
     }
 
     @Override
@@ -21,18 +21,19 @@ public class FullBorder extends Border {
     public String getRowText(int row) {
         if (row == 0) {                                             	// 상단 테두리
             return "+" + makeLine('-', display.getColumns()) + "+";
-        } else if (row == display.getRows() + 1) {                 	// 하단 테두리
+        } else if (row == display.getRows() + 1) {   //내용물 줄 수+1이면              	// 하단 테두리
             return "+" + makeLine('-', display.getColumns()) + "+";
         } else {                                                    		// 기타
-            return "|" + display.getRowText(row - 1) + "|";
+            return "|" + display.getRowText(row - 1) + "|"; //row -1은 내용물 입장에서는 0부터 시작함으로 한 줄씩 뺀다.
         }
     }
 
     // 문자 ch로 count 수만큼 연속한 문자열을 만든다
-    private String makeLine(char ch, int count) {
-        StringBuilder line = new StringBuilder();
+    private String makeLine(char ch, int count) { //어떤 문자로, 얼마나 만들지 
+    
+        StringBuilder line = new StringBuilder(); 
         for (int i = 0; i < count; i++) {
-            line.append(ch);
+            line.append(ch); //스트링빌더에 문자가 쌓인다.
         }
         return line.toString();
     }

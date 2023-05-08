@@ -3,7 +3,7 @@ package ch12.A2;
 public class StringDisplay extends Display {
     private String string; // 표시 문자열 
 
-    public StringDisplay(String string) {
+    public StringDisplay(String string) { //문자열이 1줄인 것만 가능
         this.string = string;
     }
 

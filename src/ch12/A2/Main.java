@@ -7,6 +7,7 @@ public class Main {
         md.add("Hi!");
         md.add("Good morning.");
         md.add("Good night!");
+        md.add("xxxxxxxxxxxxxxxxxxx");
         md.show();
 
         Display d1 = new SideBorder(md, '#');

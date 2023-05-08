@@ -19,9 +19,9 @@ public class StringDisplay extends Display {
 
     @Override
     public String getRowText(int row) {
-        if (row != 0) {
+        if (row != 0) { //한 줄이라서 0이 아닌 것은 범위를 벗어난 예외처리
             throw new IndexOutOfBoundsException();
         }
-        return string;
+        return string; //0일때만 string 리턴
     }
 }

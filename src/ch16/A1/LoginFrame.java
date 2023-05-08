@@ -101,7 +101,9 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
     private void userpassChanged() {
         if (textUser.getText().length() > 0) {
             textPass.setColleagueEnabled(true);
-             if (textUser.getText().length() >= 4 && textPass.getText().length() >= 4) {
+//정답코드
+                //4글자 이상 넣었을 때만 
+            if (textUser.getText().length() >= 4 && textPass.getText().length() >= 4) {
                 buttonOk.setColleagueEnabled(true);
             } else {
                 buttonOk.setColleagueEnabled(false);
