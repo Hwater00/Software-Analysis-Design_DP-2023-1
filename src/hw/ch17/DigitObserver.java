@@ -1,4 +1,4 @@
-package ch17.Sample;
+package hw.ch17;
 
 public class DigitObserver implements Observer {
     @Override

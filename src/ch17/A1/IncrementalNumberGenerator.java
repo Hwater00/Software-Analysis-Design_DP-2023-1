@@ -21,8 +21,8 @@ public class IncrementalNumberGenerator extends NumberGenerator {
     @Override
     public void execute() {
         while (number < end) {
-            notifyObservers();
-            number += inc;
+            notifyObservers(); //통지
+            number += inc; //숫자 증가
         }
     }
 }

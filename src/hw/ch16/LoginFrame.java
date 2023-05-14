@@ -41,7 +41,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         // 배경색을 설정한다
         setBackground(Color.lightGray); //컬러크래스에 있는 상수 중 회색
 
-        // 레이아웃 매니저를 사용해 4×2 그리드를 만든다.  4행 2열 테이블 형태
+        // 레이아웃 매니저를 사용해 5×3 그리드를 만든다.  4행 2열 테이블 형태
         setLayout(new GridLayout(5, 3)); // setLayout으로 지정
 
         // Colleague를 생성한다 
@@ -122,7 +122,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
             textUser.setColleagueEnabled(false); //비활성화해라
             textPass.setColleagueEnabled(false); //비활성화해라
             textMember.setColleagueEnabled(false); //비활성화해라
-            buttonOk.setColleagueEnabled(true); //활성화해라
+            buttonOk.setColleagueEnabled(false); //비활성화해라
         } else { //Login 체크박스가 눌러졌으면.. 
             // 사용자 로그인 
             textUser.setColleagueEnabled(true);

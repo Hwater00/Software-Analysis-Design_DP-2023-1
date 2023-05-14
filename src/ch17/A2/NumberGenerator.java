@@ -17,8 +17,8 @@ public abstract class NumberGenerator {
         observers.remove(observer);
     }
 
-    // Observer에 통지한다 
-    public void notifyObservers() {
+    // 숫자 생성 시 Observer에 통지한다 
+    public void notifyObservers() { 
         for (Observer o: observers) {
             o.update(this);
         }
