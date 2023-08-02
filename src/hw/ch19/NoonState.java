@@ -1,0 +1,47 @@
+package hw.ch19;
+
+public class NoonState implements State {
+    private static NoonState singleton = new NoonState();
+
+    private NoonState() {
+    }
+
+    public static State getInstance() {
+        return singleton;
+    }
+
+    //상태가 새로 추가되면 상태가 변화하는 부분 모두 변경해줘야 함
+    @Override
+    public void doClock(Context context, int hour) {
+        if (hour < 9 || 17 <= hour) { //만약  9시보다 크거나 17시보다 작으면 야간
+            context.changeState(NightState.getInstance());
+        } else if (9 <= hour && hour < 12 || 13 <= hour && hour < 17) { 
+            context.changeState(DayState.getInstance());
+        }
+    }
+
+    @Override
+    public void doUse(Context context) {
+        context.callSecurityCenter("비상：점심 시간에 금고 사용！");
+    }
+
+    @Override
+    public void doAlarm(Context context) {
+        context.callSecurityCenter("비상벨(점심 시간)");
+    }
+
+    @Override
+    public void doPhone(Context context) {
+        context.recordLog("점심 시간 통화 녹음");
+    }
+
+    @Override
+    public String toString() {
+        return "[점심 시간]";
+    }
+
+    @Override
+    public void doCCTV(Context context){
+        context.recordLog("CCTV 해상도 300 dpi로 변경");
+    }
+}

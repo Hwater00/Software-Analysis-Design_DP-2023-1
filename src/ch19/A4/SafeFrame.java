@@ -56,7 +56,7 @@ public class SafeFrame extends Frame implements ActionListener, Context {
         if (e.getSource() == buttonUse) {		// 금고 사용 버튼
             state.doUse(this);
         } else if (e.getSource() == buttonAlarm) {	// 비상벨 버튼 
-            state.doAlarm(this);
+            this.changeState(UrgentState.getInstance());   //비상 상태로 전환
         } else if (e.getSource() == buttonPhone) {	// 일반 통화 버튼  
             state.doPhone(this);
         } else if (e.getSource() == buttonExit) {	// 종료 버튼 

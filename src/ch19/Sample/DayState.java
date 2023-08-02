@@ -1,5 +1,6 @@
 package ch19.Sample;
 
+//싱글톤 패턴 적용
 public class DayState implements State {
     private static DayState singleton = new DayState();
 
@@ -11,9 +12,10 @@ public class DayState implements State {
     }
 
     @Override
-    public void doClock(Context context, int hour) {
-        if (hour < 9 || 17 <= hour) {
-            context.changeState(NightState.getInstance());
+    public void doClock(Context context, int hour) { //알려준 시간 
+        //연습문제19-2 if (hour < 8 || 21 <= hour) {
+        if (hour < 9 || 17 <= hour) { //야간에 해당되면..
+            context.changeState(NightState.getInstance()); //야간 상태로 바꿔라.
         }
     }
 

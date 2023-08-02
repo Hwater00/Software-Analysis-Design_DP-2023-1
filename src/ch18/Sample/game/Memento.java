@@ -8,7 +8,7 @@ public class Memento {
     private List<String> fruits;  // 과일
 
     // 소지금을 얻는다(narrow interface)
-    public int getMoney() {
+    public int getMoney() { 
         return money;
     }
 
@@ -25,6 +25,6 @@ public class Memento {
 
     // 과일을 얻는다(wide interface)
     List<String> getFruits() {
-         return new ArrayList<>(fruits);
+        return new ArrayList<>(fruits); //과일을 담는 ArrayList를 만들어서 리턴
     }
 }

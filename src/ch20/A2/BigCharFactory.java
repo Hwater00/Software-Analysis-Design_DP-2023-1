@@ -19,7 +19,7 @@ public class BigCharFactory {
     }
 
     // BigChar 인스턴스 생성(공유)
-    public synchronized BigChar getBigChar(char charname) {
+    public synchronized BigChar getBigChar(char charname) { //synchronized 여러 스레드가 동시에 호출한 경우 문제가 생기는 것을 방지
         BigChar bc = pool.get(String.valueOf(charname));
         if (bc == null) {
             // 여기서 BigChar 인스턴스를 생성 

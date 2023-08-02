@@ -90,7 +90,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         buttonCancel.addActionListener(this); //this는 로그인프레임 , actionPerformed를 가진다.
     }
 
-    // Colleage의 상태가 바뀌면 호출된다
+    // Colleage의 상태가 바뀌면 호출된다 ***
     @Override
     public void colleagueChanged() { 
         //실제 중재하는 역할을 한다.

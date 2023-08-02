@@ -4,6 +4,8 @@ public class Main {
     public static void main(String[] args) {
         String title = "Welcome!";
         String message = "Hello, world!";
+        
+        // 텍스트 블록 사용
         String html = """
         <!DOCTYPE html>
         <html>

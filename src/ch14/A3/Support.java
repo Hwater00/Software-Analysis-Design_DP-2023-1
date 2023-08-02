@@ -15,8 +15,9 @@ public abstract class Support {
         return next;
     }
 
-    // 트러블 해결 절차를 결정한다 
+    // 트러블 해결 절차를 결정한다 - 루프 사용!! 
     public void support(Trouble trouble) {
+        // obj: 현재 해결자를 가리키는 변수
         for (Support obj = this; true; obj = obj.next) {
             if (obj.resolve(trouble)) {
                 obj.done(trouble);

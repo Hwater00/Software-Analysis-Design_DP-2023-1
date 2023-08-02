@@ -12,8 +12,10 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
     private MacroCommand history = new MacroCommand();
     // 그리는 영역 
     private DrawCanvas canvas = new DrawCanvas(400, 400, history);
+    
     // 삭제 버튼 
     private JButton clearButton  = new JButton("clear");
+    
     // 빨간 버튼 
     private JButton redButton  = new JButton("red");
     // 초록 버튼
@@ -27,21 +29,25 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
 
         this.addWindowListener(this);
         canvas.addMouseMotionListener(this);
+
         clearButton.addActionListener(e -> {
             history.clear();
             canvas.init();
             canvas.repaint();
         });
+
         redButton.addActionListener(e -> {
             Command cmd = new ColorCommand(canvas, Color.red);
             history.append(cmd);
             cmd.execute();
         });
+
         greenButton.addActionListener(e -> {
             Command cmd = new ColorCommand(canvas, Color.green);
             history.append(cmd);
             cmd.execute();
         });
+        
         blueButton.addActionListener(e -> {
             Command cmd = new ColorCommand(canvas, Color.blue);
             history.append(cmd);

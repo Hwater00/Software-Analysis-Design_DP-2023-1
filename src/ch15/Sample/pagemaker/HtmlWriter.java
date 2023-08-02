@@ -4,7 +4,7 @@ import java.io.Writer;
 import java.io.IOException;
 
 public class HtmlWriter {
-    private Writer writer;
+    private Writer writer; 
 
     public HtmlWriter(Writer writer) {
         this.writer = writer;
@@ -12,6 +12,8 @@ public class HtmlWriter {
 
     // 타이틀 출력 
     public void title(String title) throws IOException {
+        
+        //파일에 작성 writer.write
         writer.write("<!DOCTYPE html>");
         writer.write("<html>");
         writer.write("<head>");
@@ -32,6 +34,10 @@ public class HtmlWriter {
     // 링크 출력
     public void link(String href, String caption) throws IOException {
         paragraph("<a href=\"" + href + "\">" + caption + "</a>");
+
+       // paragraph("<a href=\"" + href +"\">" + caption + "</a>"); //따움표 안에 따움표가 있는 형태, hrep, caption은 변수니깐 +로 연결
+
+
     }
 
     // 이메일 주소 출력 
@@ -44,6 +50,8 @@ public class HtmlWriter {
         writer.write("</body>");
         writer.write("</html>");
         writer.write("\n");
-        writer.close();
+
+        writer.close(); // 파일에 접근하고 나면 항상 clode 필요
+        
     }
 }

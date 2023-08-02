@@ -34,4 +34,5 @@ public class MacroCommand implements Command {
     public void clear() {
         commands.clear();
     }
+
 }

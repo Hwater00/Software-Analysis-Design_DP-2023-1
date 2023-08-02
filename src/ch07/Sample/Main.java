@@ -6,7 +6,7 @@ import java.nio.file.Path;
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length != 1) {
+        if (args.length != 1) { // 실행할 때 명령형 인자가 있는지, 없는지 확인
             usage();
             System.exit(0);
         }

@@ -11,10 +11,13 @@ public class HTMLBuilder extends Builder {
         filename = title + ".html";
         sb.append("<!DOCTYPE html>\n");
         sb.append("<html>\n");
+
         sb.append("<head><title>");
         sb.append(title);
         sb.append("</title></head>\n");
+
         sb.append("<body>\n");
+
         sb.append("<h1>");
         sb.append(title);
         sb.append("</h1>\n\n");
@@ -29,9 +32,9 @@ public class HTMLBuilder extends Builder {
 
     @Override
     public void makeItems(String[] items) {
-        sb.append("<ul>\n");
+        sb.append("<ul>\n");     // ul은 요소 
         for (String s: items) {
-            sb.append("<li>");
+            sb.append("<li>");   // li는 listItem
             sb.append(s);
             sb.append("</li>\n");
         }
@@ -42,8 +45,10 @@ public class HTMLBuilder extends Builder {
     public void close() {
         sb.append("</body>");
         sb.append("</html>\n");
+
+        //웹 페이지로 저장
         try {
-            Writer writer = new FileWriter(filename);
+            Writer writer = new FileWriter(filename); 
             writer.write(sb.toString());
             writer.close();
         } catch (IOException e) {
@@ -52,6 +57,6 @@ public class HTMLBuilder extends Builder {
     }
 
     public String getHTMLResult() {
-        return filename;
+        return filename; //생성된 파일의 이름을 리턴
     }
 }

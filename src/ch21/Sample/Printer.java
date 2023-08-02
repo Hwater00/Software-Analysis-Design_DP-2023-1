@@ -1,17 +1,18 @@
 package ch21.Sample;
+
+// 본인: 생성될 떄 시간이 오래 걸린다.
 public class Printer implements Printable {
     private String name; // 이름 
 
     // 생성자 
     public Printer() {
-        heavyJob("Printer 인스턴스 생성 중");
+        heavyJob("Printer 인스턴스 생성 중");  //생성될 떄 시간이 오래 걸린다
     }
 
     // 생성자(이름 지정)
     public Printer(String name) {
         this.name = name;
-        heavyJob("Printer 인스턴스(" + name + ") 생성 중");
-    }
+        heavyJob("Printer 인스턴스(" + name + ") 생성 중");     }
 
     // 이름 설정 
     @Override
@@ -35,9 +36,9 @@ public class Printer implements Printable {
     // 무거운 작업이라고 가정
     private void heavyJob(String msg) {
         System.out.print(msg);
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++) { //->5초 쉼
             try {
-                Thread.sleep(1000);
+                Thread.sleep(1000); 
             } catch (InterruptedException e) {
             }
             System.out.print(".");

@@ -6,7 +6,8 @@ import ch18.A4.game.Gamer;
 import java.io.*;
 
 public class Main {
-    public static final String SAVEFILENAME = "game.dat";
+
+    public static final String SAVEFILENAME = "game.dat"; //상수로 파일이름 선언
 
     public static void main(String[] args) {
         Gamer gamer = new Gamer(100);         // 최초 소지금은 100
@@ -35,10 +36,12 @@ public class Main {
             if (gamer.getMoney() > memento.getMoney()) {
                 System.out.println("※많이 늘었으니 현재 상태를 저장해 두자!");
                 memento = gamer.createMemento();
+
                 // 파일로 기록한다 
                 if (Memento.saveToFile(SAVEFILENAME, memento)) {
                     System.out.println("현재 상태를 파일로 저장했습니다.");
                 }
+
             } else if (gamer.getMoney() < memento.getMoney() / 2) {
                 System.out.println("※많이 줄었으니 이전 상태를 복원하자!");
                 gamer.restoreMemento(memento);

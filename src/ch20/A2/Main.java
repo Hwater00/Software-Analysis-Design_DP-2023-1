@@ -6,13 +6,14 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("공유한 경우:");
         testAllocation(true);
+
         System.out.println("공유하지 않는 경우:");
         testAllocation(false);
     }
 
     public static void testAllocation(boolean shared) {
         for (int i = 0; i < bsarray.length; i++) {
-            bsarray[i] = new BigString("1212123", shared);
+            bsarray[i] = new BigString("1212123", shared); 
         }
         showMemory();
     }

@@ -137,6 +137,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
             textPass.setColleagueEnabled(true);
             if (textPass.getText().length() > 0) { //passwoed 칸에 문자열이 입력되어 있으면
                 textMember.setColleagueEnabled(true);
+                
                 //추가 주민등록번호 조건
                 for(int i=0; i<textMember.getText().length();i++){
                     char tmp = textMember.getText().charAt(i);
@@ -151,7 +152,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
                     }else {
                         JOptionPane.showMessageDialog(null, "문자를 입력하지 말아주세요");
                         
-                        String s=textMember.getText().substring(0,i);
+                        String s=textMember.getText().substring(0,i); 
                         textMember.setText(s);
                         textMember.setCaretPosition(s.length());
                         buttonOk.setColleagueEnabled(false);

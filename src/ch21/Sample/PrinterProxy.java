@@ -1,6 +1,7 @@
 package ch21.Sample;
 public class PrinterProxy implements Printable {
     private String name;	// 이름
+    
     private Printer real;	// '본인' 
 
     // 생성자 
@@ -39,7 +40,7 @@ public class PrinterProxy implements Printable {
     }
 
     // 본인 생성 
-    private synchronized void realize() {
+    private synchronized void realize() { //위임
         if (real == null) {
             real = new Printer(name);
         }

@@ -24,14 +24,20 @@ public class PageMaker {
         }
     }
 
+// 
     public static void makeLinkPage(String filename) {
         try {
-            HtmlWriter writer = new HtmlWriter(new FileWriter(filename));
+            HtmlWriter writer = new HtmlWriter(new FileWriter(filename)); 
+            
             writer.title("Link page");
+
             Properties mailprop = Database.getProperties("maildata");
-            for (String mailaddr: mailprop.stringPropertyNames()) {
-                String username = mailprop.getProperty(mailaddr, "(unknown)");
+
+            for (String mailaddr: mailprop.stringPropertyNames()) {  // stringPropertyNames 프로퍼티 이름(키)만 모아서 돌려줌
+                
+                String username = mailprop.getProperty(mailaddr, "(unknown)"); //
                 writer.mailto(mailaddr, username);
+
             }
             writer.close();
             System.out.println(filename + " is created.");

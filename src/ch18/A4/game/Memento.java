@@ -27,13 +27,14 @@ public class Memento {
 
     // 과일을 얻는다(wide interface)
     List<String> getFruits() {
-         return new ArrayList<>(fruits);
+        return new ArrayList<>(fruits);
     }
 
+//
     // 파일에 저장
     public static boolean saveToFile(String filename, Memento memento) {
+        // 스트링으로 바꾸는 과정
         StringBuilder sb = new StringBuilder();
-
         // 소지금
         sb.append(String.format("%d", memento.money));
         sb.append("\n");
@@ -70,7 +71,7 @@ public class Memento {
             // 소지금
             int money = 0;
             try {
-                money = Integer.parseInt(lines.get(0));
+                money = Integer.parseInt(lines.get(0)); //첫 번쩨 line 돈의 수를 스트링에서 정수로 바꿈
             } catch (NumberFormatException e) {
                 System.out.println("Format error: " + e);
                 return null;
@@ -89,4 +90,8 @@ public class Memento {
             return null;
         }
     }
+
+
+
+
 }

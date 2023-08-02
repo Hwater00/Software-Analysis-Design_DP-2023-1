@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+//Orginator 역할 : 자기 상태를 보관,복원
 public class Gamer {
     // 소지금
     private int money;
@@ -30,7 +31,8 @@ public class Gamer {
     // 내기한다 … 게임 진행 
     public void bet() {
         // 주사위를 던진다 
-        int dice = random.nextInt(6) + 1;
+        int dice = random.nextInt(6) + 1; // 0부터 5사이의 정수가 발생+1 -> 1 ~ 6
+        
         if (dice == 1) {
             // 1의 눈 … 소지금이 증가한다 
             money += 100;
@@ -50,9 +52,10 @@ public class Gamer {
         }
     }
 
-    // 스냅샷을 찍는다 
+    // 스냅샷을 찍는다 = 보관 = memento 생성
     public Memento createMemento() {
-        Memento m = new Memento(money);
+        Memento m = new Memento(money); //this.money
+
         for (String f: fruits) {
             // 과일은 맛있는 것만 저장한다
             if (f.startsWith("맛있는 ")) {
@@ -75,7 +78,8 @@ public class Gamer {
 
     // 과일을 하나 얻는다
     private String getFruit() {
-        String f = fruitsName[random.nextInt(fruitsName.length)];
+        String f = fruitsName[random.nextInt(fruitsName.length)]; //배열의 길이를 이용하면 유연성이 있다
+        
         if (random.nextBoolean()) {
             return "맛있는 " + f;
         } else {

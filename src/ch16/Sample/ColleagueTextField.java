@@ -6,6 +6,7 @@ import java.awt.event.TextEvent;
 import java.awt.event.TextListener;
 
 public class ColleagueTextField extends TextField implements TextListener, Colleague { //텍스트필드를 상소잗고, 콜리그와 반응하는 리스너 역할을 자체에서 처리한다.
+    
     private Mediator mediator;
 
     public ColleagueTextField(String text, int columns) {
